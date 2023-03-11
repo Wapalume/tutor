@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Расписание</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="menu">
+            <div class="menu__block">
+                <a href="#" class="menu__item">
+                    <div class="menu__icon menu__icon_p"></div>
+                    <div class="menu__line-active"></div>
+                </a>
+                <a href="#" class="menu__item active">
+                    <div class="menu__icon menu__icon_c active"></div>
+                    <div class="menu__line-active"></div>
+                </a>
+                <a href="#" class="menu__item">
+                    <div class="menu__icon menu__icon_m"></div>
+                    <div class="menu__line-active"></div>
+                </a>
+                <a href="#" class="menu__item">
+                    <div class="menu__icon menu__icon_b"></div>
+                    <div class="menu__line-active"></div>
+                </a>
+            </div>
+        </div>
+        <div class="timetable">
+            <div class="timetable__header header-timetable">
+                <div class="container">
+                    <div class="header-timetable__block">
+                        <div class="header-timetable__title title">Расписание</div>
+                        <div class="header-timetable__items">
+                            <div class="header-timetable__add hover-block">
+                                <img src="img/timetable/add.svg" alt="">
+                                <div class="header-timetable__add-hover hover"></div>
+                            </div>
+                            <div class="header-timetable__date">
+                                <div class="header-timetable__arrow arrow-last hover-block">
+                                    <img src="img/timetable/arrow-last.svg" alt="">
+                                    <div class="header-timetable__arrow-hover hover"></div>
+                                </div>
+                                <div class="header-timetable__date-name">
+                                    27.02 - 05.03
+                                </div>
+                                <div class="header-timetable__arrow arrow-next hover-block">
+                                    <img src="img/timetable/arrow-next.svg" alt="">
+                                    <div class="header-timetable__arrow-hover hover"></div>
+                                </div>
+                            </div>
+                            <div class="header-timetable__calender hover-block">
+                                <img src="img/timetable/calender.svg" alt="">
+                                <div class="header-timetable__calender-hover hover"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timetable__body">
+                <div class="timetable__block">
+                    <div class="timetable__column">
+                        <div class="timetable__date-pc">
+                            Понедельник, 27 февраля
+                        </div>
+                        <div class="timetable__row-card">
+                            <div class="timetable__card card">
+                                <div class="card__header">
+                                    <div class="card__header-left">
+                                        <div class="card__tag"><span class="one-color"></span></div>
+                                        <div class="card__time">14:00-15:00</div>
+                                    </div>
+                                    <div class="card__open hover-block">
+                                        <img src="img/timetable/open-card.svg" alt="">
+                                        <div class="card__open-hover hover"></div>
+                                    </div>
+                                </div>
+                                <div class="card__info">
+                                    Настя Моисеева, ОГЭ, Красноярск, 1000Р
+                                </div>
+                                <div class="card__check">
+                                    <div class="card__check-false hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 5L19 19M5.00003 19L12 12L19 5" stroke="#BAB8BD"
+                                                stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                    <div class="card__check-true hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8"
+                                                stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timetable__card card">
+                                <div class="card__header">
+                                    <div class="card__header-left">
+                                        <div class="card__tag"><span class="one-color"></span>
+                                            <span class="three-color"></span>
+                                        </div>
+                                        <div class="card__time">14:00-15:00</div>
+                                    </div>
+                                    <div class="card__open hover-block">
+                                        <img src="img/timetable/open-card.svg" alt="">
+                                        <div class="card__open-hover hover"></div>
+                                    </div>
+                                </div>
+                                <div class="card__info">
+                                    Сергей, ОГЭ, Тетрика
+                                </div>
+                                <div class="card__check">
+                                    <div class="card__check-false hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 5L19 19M5.00003 19L12 12L19 5" stroke="#BAB8BD"
+                                                stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                    <div class="card__check-true hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8"
+                                                stroke="#3CEBE6" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable__column">
+                        <div class="timetable__date-pc">
+                            Понедельник, 27 февраля
+                        </div>
+                        <div class="timetable__row-card">
+                            <div class="timetable__card card">
+                                <div class="card__header">
+                                    <div class="card__header-left">
+                                        <div class="card__tag"><span class="three-color"></div>
+                                        <div class="card__time">14:00-15:00</div>
+                                    </div>
+                                    <div class="card__open hover-block">
+                                        <img src="img/timetable/open-card.svg" alt="">
+                                        <div class="card__open-hover hover"></div>
+                                    </div>
+                                </div>
+                                <div class="card__info">
+                                    Настя Моисеева, ОГЭ, Красноярск, 1000Р
+                                </div>
+                                <div class="card__check">
+                                    <div class="card__check-false hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 5L19 19M5.00003 19L12 12L19 5" stroke="#BAB8BD"
+                                                stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                    <div class="card__check-true hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8"
+                                                stroke="#3CEBE6" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timetable__card card">
+                                <div class="card__header">
+                                    <div class="card__header-left">
+                                        <div class="card__tag"><span class="two-color"></div>
+                                        <div class="card__time">14:00-15:00</div>
+                                    </div>
+                                    <div class="card__open hover-block">
+                                        <img src="img/timetable/open-card.svg" alt="">
+                                        <div class="card__open-hover hover"></div>
+                                    </div>
+                                </div>
+                                <div class="card__info">
+                                    Настя Моисеева, ОГЭ, Красноярск, 1000Р
+                                </div>
+                                <div class="card__check">
+                                    <div class="card__check-false hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 5L19 19M5.00003 19L12 12L19 5" stroke="#BAB8BD"
+                                                stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                    <div class="card__check-true hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8"
+                                                stroke="#3CEBE6" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable__column">
+                        <div class="timetable__date-pc">
+                            Понедельник, 27 февраля
+                        </div>
+                        <div class="timetable__row-card">
+                            <div class="timetable__card card">
+                                <div class="card__header">
+                                    <div class="card__header-left">
+                                        <div class="card__tag"><span class="three-color"></div>
+                                        <div class="card__time">14:00-15:00</div>
+                                    </div>
+                                    <div class="card__open hover-block">
+                                        <img src="img/timetable/open-card.svg" alt="">
+                                        <div class="card__open-hover hover"></div>
+                                    </div>
+                                </div>
+                                <div class="card__info">
+                                    Сергей, ОГЭ, Тетрика
+                                </div>
+                                <div class="card__check">
+                                    <div class="card__check-false hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5 5L19 19M5.00003 19L12 12L19 5" stroke="#BAB8BD"
+                                                stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                    <div class="card__check-true hover-block">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M20 7L14.6093 13.4688C12.4732 16.0322 11.4051 17.3139 10 17.3139C8.59488 17.3139 7.52681 16.0322 5.39067 13.4688L4 11.8"
+                                                stroke="#3CEBE6" stroke-width="1.5" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="open-card">
+            <div class="open-card__block">
+                <div class="open-card__header">
+                    <div class="open-card__header-left">
+                        <div class="open-card__icon">
+                            <img src="img/timetable/open-card.svg" alt="">
+                        </div>
+                        <div class="open-card__title">
+                            <input type="text" placeholder="Введите наименование урока">
+                        </div>
+                    </div>
+                    <div class="open-card__close hover-block">
+                        <img src="img/timetable/close.svg" alt="">
+                        <div class="hover"></div>
+                    </div>
+                </div>
+                <div class="open-card__body">
+                    <div class="open-card__sect-1">
+                        <div class="open-card__tag">
+                            <span class="two-color"></span>
+                            <div class="open-card__tag-active tag-active ">
+                                <div class="tag-active__header">
+                                    <div class="tag-active__title">
+                                        Метки
+                                    </div>
+                                    <div class="tag-active__close hover-block">
+                                        <img src="img/timetable/close.svg" alt="">
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                                <div class="tag-active__items">
+                                    <div class="tag-active__tag one-color"></div>
+                                    <div class="tag-active__add hover-block">
+                                        <img src="img/timetable/add.svg" alt="">
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                                <div class="tag-active__items">
+                                    <div class="tag-active__tag two-color"></div>
+                                    <div class="tag-active__add hover-block">
+                                        <img src="img/timetable/add.svg" alt="">
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                                <div class="tag-active__items">
+                                    <div class="tag-active__tag three-color"></div>
+                                    <div class="tag-active__add hover-block">
+                                        <img src="img/timetable/add.svg" alt="">
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                                <div class="tag-active__items">
+                                    <div class="tag-active__tag four-color"></div>
+                                    <div class="tag-active__add hover-block">
+                                        <img src="img/timetable/add.svg" alt="">
+                                        <div class="hover"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="open-card__time">
+                            <img src="img/timetable/time.svg" alt="">
+                            <p>13:00 - 14:00</p>
+                        </div>
+                        <div class="open-card__time">
+                            <img src="img/timetable/calender.svg" alt="">
+                            <p>27 марта 2023</p>
+                        </div>
+                    </div>
+                    <div class="open-card__sect-2">
+                        <div class="open-card__name">
+                            <p>Ученик</p>
+                            <input type="text" class="input-name">
+                        </div>
+                        <div class="open-card__name-add">
+                            <p>Новый ученик</p>
+                            <div class="open-card__name-add-items">
+                                <input type="text" placeholder="Фамилия Имя" class="input-name">
+                                <svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23 10L17.6093 16.4688C15.4732 19.0322 14.4051 20.3139 13 20.3139C11.5949 20.3139 10.5268 19.0322 8.39067 16.4688L7 14.8"
+                                        stroke-width="1.5" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="open-card__price">
+                        <img src="img/timetable/wallet.svg" alt="">
+                        <input type="text" placeholder="Стоимость урока" class="input-theme">
+                        <p>Стоимость урока</p>
+                    </div>
+                    <div class="open-card__theme">
+                        <img src="img/timetable/theme.svg" alt="">
+                        <input type="text" placeholder="Тема урока" class="input-theme">
+                        <p>Тема урока</p>
+                    </div>
+                    <div class="open-card__info">
+                        <div class="open-card__stats">
+                            <p class="open-card__stats-title">Хорошо получается</p>
+                            <div class="open-card__stats-tetx">Описание</div>
+                        </div>
+                        <div class="open-card__stats">
+                            <p class="open-card__stats-title">Нужно отработать</p>
+
+                            <div class="open-card__stats-tetx">Определять совершенный и несовершенный вид.</div>
+                        </div>
+                        <div class="open-card__stats">
+                            <p class="open-card__stats-title">План на следующее занятие</p>
+
+                            <div class="open-card__stats-tetx">Проверочная работа</div>
+                        </div>
+                    </div>
+                    <div class="open-card__delete">
+                        <div class="hover-block">
+                            <img src="img/timetable/delete.svg" alt="">
+                            <div class="hover"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

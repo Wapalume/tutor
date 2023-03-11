@@ -1,0 +1,122 @@
+.menu {
+  margin: 25px;
+  position: fixed;
+  // .menu__block
+
+  &__block {
+    background: #222431;
+    border-radius: 20px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  // .menu__item
+
+  &__item {
+    margin: 0 0 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  // .menu__icon
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: all 0.3s;
+    // .menu__icon_p
+
+    &_p {
+      background-image: url(../img/timetable/menu/profile.svg);
+      &.active,
+      &:hover {
+        background-image: url(../img/timetable/menu/profile-active.svg);
+        animation: swing ease-in-out 0.5s 1 alternate;
+      }
+    }
+
+    // .menu__icon_c
+
+    &_c {
+      background-image: url(../img/timetable/menu/calender.svg);
+      &.active,
+      &:hover {
+        background-image: url(../img/timetable/menu/calender-active.svg);
+        animation: swing ease-in-out 0.5s 1 alternate;
+      }
+    }
+
+    // .menu__icon_m
+
+    &_m {
+      background-image: url(../img/timetable/menu/message.svg);
+      &.active,
+      &:hover {
+        background-image: url(../img/timetable/menu/message-active.svg);
+        animation: swing ease-in-out 0.5s 1 alternate;
+      }
+    }
+
+    // .menu__icon_b
+
+    &_b {
+      background-image: url(../img/timetable/menu/blog.svg);
+      &.active,
+      &:hover {
+        background-image: url(../img/timetable/menu/blog-active.svg);
+        animation: swing ease-in-out 0.5s 1 alternate;
+      }
+    }
+  }
+
+  // .menu__line-active
+
+  &__line-active {
+    display: none;
+    margin: 5px 0 0 0;
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(133.51deg, #ffadaf 12.28%, #d5baff 100%),
+      linear-gradient(276.77deg, #fed8b7 51.65%, #f07167 89.39%);
+    border-radius: 15px 15px 0px 0px;
+  }
+}
+@keyframes swing {
+  0%,
+  30%,
+  50%,
+  70%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: rotate(5deg);
+  }
+
+  80% {
+    transform: rotate(-5deg);
+  }
+}
+
+.menu__item.active .menu__line-active {
+  display: block;
+}

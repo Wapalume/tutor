@@ -1,0 +1,564 @@
+//обнуляющие стили
+@import "reset_values.scss";
+
+//подключение шрифта
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+// <переменные >
+$md2: 991.98px;
+$md3: 767.98px;
+$md4: 479.98px;
+:root {
+  --one-color: #3cebe6;
+  --two-color: #d5baff;
+  --three-color: #ffadaf;
+  --four-color: #edc9a9;
+}
+// </переменные>
+
+// <общие стили>
+body {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #0f111e;
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  margin: 0 25px 0 0;
+}
+
+// </общие стили>
+@import "common.scss";
+
+// стили меню
+@import "menu.scss";
+
+// стили на странице расписание
+
+.timetable {
+  margin: 45px 0 20px 165px;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  // .timetable__header
+
+  &__header {
+  }
+
+  // .timetable__body
+
+  &__body {
+    margin: 40px 0 0 0;
+    flex: 1 0 auto;
+    position: relative;
+  }
+
+  // .timetable__block
+
+  &__block {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    margin-right: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    // для Mozilla Firefox
+    scrollbar-color: #0f111e #0f111e; /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-width: none;
+    // для Google Chrome, Яндекс.Браузер, Safari и Opera
+    /* полоса прокрутки (скроллбар) */
+    &::-webkit-scrollbar {
+      width: 0px; /* ширина для вертикального скролла */
+      height: 4px; /* высота для горизонтального скролла */
+      background-color: #222431;
+      border-radius: 10px;
+    }
+
+    /* ползунок скроллбара */
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(133.51deg, #ffadaf 12.28%, #d5baff 100%);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(133.51deg, #ffadaf 12.28%, #d5baff 100%);
+    }
+  }
+
+  // .timetable__column
+
+  &__column {
+    flex: 0 0 300px;
+    margin: 0 20px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__row-card {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    // для Mozilla Firefox
+    scrollbar-color: #0f111e #0f111e; /* «цвет ползунка» «цвет полосы скроллбара» */
+    scrollbar-width: none;
+    // для Google Chrome, Яндекс.Браузер, Safari и Opera
+    /* полоса прокрутки (скроллбар) */
+    &::-webkit-scrollbar {
+      width: 0px; /* ширина для вертикального скролла */
+      height: 0px; /* высота для горизонтального скролла */
+      background-color: #222431;
+      border-radius: 10px;
+    }
+  }
+  // .timetable__date-pc
+
+  &__date-pc {
+    background: #222431;
+    border-radius: 15px;
+    font-weight: 500;
+    padding: 17px 20px;
+    margin: 0 0 20px 0;
+  }
+
+  // .timetable__card
+
+  &__card {
+  }
+}
+.header-timetable {
+  // .header-timetable__block
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .header-timetable__title
+
+  &__title {
+  }
+
+  // .header-timetable__items
+
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+
+  // .header-timetable__add
+
+  &__add {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  // .header-timetable__date
+
+  &__date {
+    display: flex;
+    align-items: center;
+    margin: 0 25px;
+  }
+
+  // .header-timetable__arrow
+
+  &__arrow {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  // .header-timetable__date-name
+
+  &__date-name {
+    margin: 0 15px;
+  }
+
+  // .header-timetable__calender
+
+  &__calender {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.card {
+  background: #24202e;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 0 0 15px 0;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  &:hover {
+    background: rgba(36, 32, 46, 0.8);
+  }
+  &:last-child {
+    margin: 0 0 70px 0;
+  }
+  // .card__header
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__header-left {
+    display: flex;
+    align-items: center;
+  }
+  // .card__tag
+
+  &__tag {
+    display: flex;
+    span {
+      border-radius: 20px;
+      width: 50px;
+      height: 15px;
+      display: block;
+      margin: 0 5px 0 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  // .card__time
+
+  &__time {
+    font-weight: 500;
+    margin: 0 0 0 15px;
+  }
+
+  // .card__open
+
+  &__open {
+  }
+
+  // .card__open-hover
+
+  &__open-hover {
+  }
+
+  // .card__info
+
+  &__info {
+    margin: 15px 0 20px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  // .card__check
+
+  &__check {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .card__check-false
+
+  &__check-false {
+  }
+
+  // .card__check-true
+
+  &__check-true {
+    svg {
+      stroke: #3cebe6;
+    }
+  }
+}
+
+.open-card {
+  display: none;
+  padding: 0 10px;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.75);
+  overflow: auto;
+  // .open-card__block
+
+  &__block {
+    position: relative;
+    max-width: 600px;
+    right: 0px;
+    left: 0px;
+    top: 10%;
+    margin: 0px auto;
+    border-radius: 15px;
+    background-color: #1d1c21;
+  }
+
+  // .open-card__header
+
+  &__header {
+    background: #0f111e;
+    border-radius: 15px 15px 0px 0px;
+    padding: 15px 25px 11px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__header-left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  // .open-card__icon
+
+  &__icon {
+  }
+
+  // .open-card__title
+
+  &__title {
+    font-weight: 400;
+    color: #a7a7ad;
+    margin: 0 24px;
+    width: 100%;
+    input {
+      background: transparent;
+      color: #a7a7ad;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+
+  // .open-card__close
+
+  &__close {
+  }
+
+  // .open-card__body
+
+  &__body {
+    padding: 25px;
+  }
+
+  // .open-card__sect-1
+
+  &__sect-1 {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  // .open-card__tag
+
+  &__tag {
+    margin: 0 30px 0 0;
+    cursor: pointer;
+    span {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: block;
+    }
+  }
+
+  // .open-card__tag-active
+
+  &__tag-active {
+  }
+
+  // .open-card__time
+
+  &__time {
+    display: flex;
+    align-items: center;
+    margin: 0 30px 0 0;
+    cursor: pointer;
+    &:last-child {
+      margin: 0;
+    }
+    img {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  // .open-card__sect-2
+
+  &__sect-2 {
+    margin: 25px 0 0 0;
+    display: flex;
+    align-items: center;
+  }
+
+  // .open-card__name
+
+  &__name {
+    line-height: 140%;
+    color: #a7a7ad;
+    margin: 0 40px 0 0;
+    p {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  // .open-card__name-add
+
+  &__name-add {
+    line-height: 140%;
+    color: #a7a7ad;
+    p {
+      margin: 0 0 10px 0;
+    }
+    svg {
+      margin: 0 0 0 10px;
+      stroke: #a7a7ad;
+    }
+  }
+  &__name-add-items {
+    display: flex;
+    align-items: center;
+  }
+  // .open-card__price
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 0;
+    img {
+      margin: 0 20px 0 0;
+    }
+    p {
+      display: none;
+    }
+  }
+
+  // .open-card__theme
+
+  &__theme {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 0 0;
+    img {
+      margin: 0 20px 0 0;
+    }
+    p {
+      display: none;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+
+  // .open-card__info
+
+  &__info {
+    margin: 30px 0 0 0;
+  }
+
+  // .open-card__stats
+
+  &__stats {
+    margin: 0 0 15px 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__stats-title {
+    color: #a7a7ad;
+  }
+  &__stats-tetx {
+    margin: 10px 0 0 0;
+  }
+  // .open-card__delete
+
+  &__delete {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 0 0 0;
+  }
+}
+.tag-active {
+  display: none;
+  background: #0f111e;
+  border-radius: 10px;
+  max-width: 210px;
+  width: 100%;
+  padding: 10px 15px 15px 15px;
+  position: absolute;
+  top: 35px;
+  // .tag-active__header
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .tag-active__title
+
+  &__title {
+  }
+
+  // .tag-active__close
+
+  &__close {
+  }
+
+  // .tag-active__items
+
+  &__items {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  // .tag-active__tag
+
+  &__tag {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+  }
+
+  // .tag-active__add
+
+  &__add {
+  }
+}

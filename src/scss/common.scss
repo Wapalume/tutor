@@ -1,0 +1,63 @@
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+.hover-block {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    position: relative;
+    z-index: 2;
+  }
+}
+.hover {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.4s;
+  background: transparent;
+  position: absolute;
+}
+
+.header-timetable__calender:hover .hover,
+.header-timetable__add:hover .hover,
+.header-timetable__arrow:hover .hover,
+.hover-block:hover .hover {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.one-color {
+  background-color: var(--one-color);
+}
+.two-color {
+  background-color: var(--two-color);
+}
+.three-color {
+  background-color: var(--three-color);
+}
+.four-color {
+  background-color: var(--four-color);
+}
+.input-name {
+  height: 40px;
+  background: #222431;
+  border-radius: 10px;
+  max-width: 200px;
+  width: 100%;
+  color: #a7a7ad;
+  padding: 0 15px;
+}
+.input-theme {
+  background: #222431;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 15px;
+  width: 100%;
+  color: #a7a7ad;
+}
